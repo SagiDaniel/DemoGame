@@ -1,1 +1,1 @@
-# DemoGame
+A feladatot Németh Szabolcs, Nagy Attila és Sági Dániel készíti
