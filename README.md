@@ -1,1 +1,1 @@
-A feladatot Németh Szabolcs, Nagy Attila és Sági Dániel készíti
+A feladatot Németh Szabolcs,Daó László Nagy Attila és Sági Dániel készíti
