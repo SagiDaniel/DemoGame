@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace medievalWars
 {
-    internal class Map
+    internal class PassiveNPC
     {
-
     }
 }
