@@ -33,11 +33,7 @@ namespace medievalWars
         }
         private static void Jugjuguse(int use) 
         {
-            if (<=1)
-            {
-
-            }
-            return
+           
         }
     }
 }

@@ -8,5 +8,24 @@ namespace medievalWars
 {
     internal class HostileNPC
     {
+        private int Lloyd;
+        private int Fallen;
+        private int Dwarf;
+        public string Lloyd
+        {
+            get { return Lloyd; }
+        }
+
+        public int Fallen
+        {
+            get { return Fallen; }
+        }
+
+        public int Dwarf
+        {
+            get { return Dwarf; }
+        }
+
+        
     }
 }
