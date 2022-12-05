@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoGame
 {
-    class Warrior
+    internal class Warrior
     {
     }
 }
