@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5fb4907-4d4c-4bc5-8f7f-522f609df343" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DemoGame/skill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoGame/Archer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Archer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoGame/views.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoGame/DemoGame.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/DemoGame.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoGame/HostileNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/HostileNPC.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoGame/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoGame/PassiveNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoGame/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoGame/Warrior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Warrior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoGame/Wizard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Wizard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoGame/skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/skill.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670586069010</updated>
-      <workItem from="1670586078558" duration="1172000" />
+      <workItem from="1670586078558" duration="3642000" />
     </task>
     <servers />
   </component>

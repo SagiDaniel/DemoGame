@@ -1,33 +1,31 @@
+using System;
+
 namespace DemoGame
 {
-    class skill
+    public class skill : Views
     {
-        private int[] tamadas = new int[10];
-        private int[] vedekezes = new int[10];
-        private int[] maxhap = new int[10];
-        private int[] hpregen = new int[10];
+        private int tamadas=0;
+        private int vedekezes=0;
+        private int maxhap=0;
+        private int hpregen=0;
 
-        public int[] Tamadas
+        public int Tamadas
         {
             get => tamadas;
-            set => tamadas = value;
+            set => tamadas =tamadas++;
         }
-        public int[] Vedekezes
+
+        public int Vedekezes
         {
             get => vedekezes;
-            set => vedekezes = value;
+            set => vedekezes = vedekezes++;
         }
 
-        public int[] Maxhap
+        public int Maxhap
         {
             get => maxhap;
-            set => maxhap = value;
+            set => maxhap = maxhap++;
         }
-
-        public int[] Hpregen
-        {
-            get => hpregen;
-            set => hpregen = value;
-        }
+        
     }
 }
