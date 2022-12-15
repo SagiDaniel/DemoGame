@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace DemoGame
 {
-    class Archer
+    public class Archer
     {
-     //nev
+         //nev
         private string name = "Hawk";
         public string GetName
         {
