@@ -47,12 +47,13 @@
     <Compile Include="Enemies.cs" />
     <Compile Include="HostileNPC.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="Map.cs" />
+    <Compile Include="playeratc.cs" />
     <Compile Include="moving.cs" />
     <Compile Include="player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="skill.cs" />
+    <Compile Include="map.cs" />
     <Compile Include="viewhelp.cs" />
     <Compile Include="views.cs" />
     <Compile Include="Warrior.cs" />

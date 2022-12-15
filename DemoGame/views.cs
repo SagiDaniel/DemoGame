@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Net.Mime;
 using System.Xml.XPath;
 using DemoGame;
 
@@ -31,10 +32,32 @@ namespace DemoGame
                     break;
                 }
             } while (true);
-            Map.maps(bekerellenfel,bekerkarakter);
             player.karakter(bekerkarakter);
-            viewhelp.viewhelps();
-            Console.WriteLine();
+            DemoGame.playeratc.playerattack(bekerellenfel,bekerkarakter);
+            Console.WriteLine("Mit szeretne csinálni(bolt,harc,kilép)");
+            string mitcsinal = "";
+            do
+            {
+                mitcsinal = Console.ReadLine()?.ToLower();
+                if (mitcsinal=="bolt")
+                {
+                    HostileNPC.bolt();
+                }
+                else if (mitcsinal == "harc")
+                {
+                    map.maps(bekerkarakter);
+                }
+                else if (mitcsinal=="kilép")
+                {
+                    System.Environment.Exit(-1);
+                }
+                else
+                {
+                    Console.WriteLine("Nem jót adott meg");
+                }
+                Console.WriteLine("Mit szeretne csinálni(bolt,harc,kilép)");
+                break;
+            } while (true);
             Console.ReadKey();
         }
     }

@@ -3,22 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DemoGame;
+
 
 namespace DemoGame
 {
-    public class Map
+    public class playeratc
     {
-        //0kesz 
-        //1folyamatban
-        //2nincskesz
-        //Lloyd Kingdom
-        public int[] Lloydmap = new int[5]{1,2,2,2,2};
-        //Fallen Kingdom
-        public int[] Fallenmap = new int[5]{1,2,2,2,2};
-        //Dwarf Kingdom
-        public int[] Kingdomnmap = new int[5]{1,2,2,2,2};
-
-        public static void maps(string ellenfel, string karakter)
+        public static void playerattack(string ellenfel, string karakter)
         {
             Random rnd = new Random();
             if ("fiora" == karakter)
@@ -70,7 +62,6 @@ namespace DemoGame
                     warrior.SetBasicAttack3 = rnd.Next(13, 17);
                 }
             }
-			
         }
     }
 }

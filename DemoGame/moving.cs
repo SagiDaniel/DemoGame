@@ -3,53 +3,48 @@ namespace DemoGame
 {
     public class moving
     {
-        public static void move()
+        public static void move(string bekerkarakter)
         {
-            /*
-             mozgas(elore,hatra)
-             tamaddas(1,2,3)
-             bandage
-             poti
-             medkit
-             jugjug
-             */
             do
             {
+                Random rnd = new Random();
+                int rand = rnd.Next(1, 4);
                 Console.WriteLine(
-                    "Adja meg mit szeretne tenni:Mozgás(előre v hátra), támadás(1,2,3), item haszálni (bandage,poti,medkit,jugjug)");
+                    "Adja meg mit szeretne tenni:Mozgás(előre v hátra), támadás(támadás), item haszálni (bandage,poti,medkit,jugjug), menekülés(kilép)");
                 Item healek = new Item();
                 string beker = Console.ReadLine();
                 if (beker=="előre")
                 {
                     int ezaz = 0;
                     int lokes = 0;
-                    for (int j = 0; j < viewhelp.palya.Length; j++)
+                    for (int j = 0; j < map.palya.Length; j++)
                     {
                         if (lokes!=0)
                         {
-                            
-                            viewhelp.palya[j+1] = "Y";
+                            map.palya[j+1] = "Y";
                             break;
+                            enemies.En();
                         }
                         if (ezaz==1)
                         {
-                            viewhelp.palya[j] = "X";
+                            map.palya[j] = "X";
                             ezaz = 0;
                             break;
+                            enemies.En();
                         }
-
-                        if (viewhelp.palya[j] == "X")
+                        if (map.palya[j] == "X")
                         {
-                            if (viewhelp.palya[j + 1] == "Y"&&j<6)
+                            if (map.palya[j + 1] == "Y"&&j<6)
                             {
-                                viewhelp.palya[j + 1] = "_";
+                                map.palya[j + 1] = "_";
                                 lokes++;
                             }
                             else if (j==6) {}
                             else
                             {
                                 ezaz++;
-                                viewhelp.palya[j] = "_";
+                                map.palya[j] = "_";
+                                enemies.En();
                             }
                         }
                     }
@@ -57,20 +52,21 @@ namespace DemoGame
                 else if (beker == "hátra")
                 {
                     int ezaz = 0;
-                    for (int i =  viewhelp.palya.Length-1; i >= 0; i--)
+                    for (int i =  map.palya.Length-1; i >= 0; i--)
                     {
                         if (ezaz==1)
                         {
-                            viewhelp.palya[i] = "X";
+                            map.palya[i] = "X";
                             ezaz = 0;
                             break;
                         }
-                        if (viewhelp.palya[i]=="X"&&i>1)
+                        if (map.palya[i]=="X"&&i>1)
                         {
                             ezaz = 1;
-                            viewhelp.palya[i] = "_";
+                            map.palya[i] = "_";
                         }
                     }
+                    enemies.En();
                 }
                 else if (beker=="bandage")
                 {
@@ -88,6 +84,7 @@ namespace DemoGame
                         Console.WriteLine("Nincsen bandaged");
                         
                     }
+                    enemies.En();
                 }
                 else if (beker=="poti")
                 {
@@ -106,6 +103,7 @@ namespace DemoGame
                         Console.WriteLine("Nincsen potid");
                         
                     }
+                    enemies.En();
                 }
                 else if (beker == "medkit")
                 {
@@ -122,6 +120,7 @@ namespace DemoGame
                     {
                         Console.WriteLine("Nincsen medkited");
                     }
+                    enemies.En();
                 }
                 else if (beker=="jugjug")
                 {
@@ -139,18 +138,77 @@ namespace DemoGame
                     {
                         Console.WriteLine("Nincsen jugjugod");
                     }
+                    enemies.En();
                 }
-                
-
-
-                for (int i = 0; i < viewhelp.palya.Length; i++)
+                else if (beker == "támadás")
                 {
-                    Console.Write(viewhelp.palya[i]);
+                    if (bekerkarakter=="geralt")
+                    {
+                        for (int i = 0; i < map.palya.Length; i++)
+                        {
+                            if (map.palya[i]=="X"&&map.palya[i+1]=="Y")
+                            {
+                                if (rand==1)
+                                {
+                                    enemies.Enemy[0]-=player.jatekos[4];
+                                    rand=rnd.Next(1, 4);
+                                }
+                                else if (rand==2)
+                                {
+                                    enemies.Enemy[0]-=player.jatekos[5];
+                                    rand=rnd.Next(1, 4);
+                                }
+                                else
+                                {
+                                    enemies.Enemy[0]-=player.jatekos[6];
+                                    rand=rnd.Next(1, 4);
+                                }
+                            break;    
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (rand==1)
+                        {
+                            enemies.Enemy[0]-=player.jatekos[4];
+                            rand=rnd.Next(1, 4);
+                        }
+                        else if (rand==2)
+                        {
+                            enemies.Enemy[0]-=player.jatekos[5];
+                            rand=rnd.Next(1, 4);
+                        }
+                        else
+                        {
+                            enemies.Enemy[0]-=player.jatekos[6];
+                            rand=rnd.Next(1, 4);
+                        }
+                    }
+                    enemies.En();
                 }
-
+                if (beker=="kilép")
+                {
+                    break;
+                }
+                int halal = 0;
+                for (int i = 0; i < map.palya.Length; i++)
+                {
+                    if (map.palya[i]=="Y")
+                    {
+                        halal++;
+                    }
+                }
+                if (halal == 0)
+                {
+                    break;
+                }
+                for (int i = 0; i < map.palya.Length; i++)
+                {
+                    Console.Write(map.palya[i]);
+                }
                 Console.WriteLine();
-            } while (true);
-            
+            } while (false);
         }
     }
 }
