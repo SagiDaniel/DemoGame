@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5fb4907-4d4c-4bc5-8f7f-522f609df343" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DemoGame/Enemies.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoGame/move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DemoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoGame/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoGame/map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoGame/DemoGame.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/DemoGame.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoGame/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoGame/Wizard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Wizard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoGame/map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/Map.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoGame/skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/skill.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoGame/views.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemoGame/views.cs" afterDir="false" />
     </list>
@@ -19,10 +24,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DemoGame/Archer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DemoGame/HostileNPC.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DemoGame/Item.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DemoGame/Warrior.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DemoGame/Wizard.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DemoGame/map.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,18 +37,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowIL Viewer.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="DemoGame" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -75,8 +76,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670586069010</updated>
-      <workItem from="1670586078558" duration="3679000" />
-      <workItem from="1670727162548" duration="1314000" />
+      <workItem from="1670586078558" duration="3642000" />
+      <workItem from="1670913560319" duration="4906000" />
     </task>
     <servers />
   </component>
@@ -99,5 +100,24 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DemoGame/views.cs</url>
+          <line>27</line>
+          <properties documentPath="C:\Users\Suli\Desktop\projekt\DemoGame\DemoGame\DemoGame\views.cs" initialLine="25" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="673" />
+            </startOffsets>
+            <endOffsets>
+              <option value="674" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DemoGame
 {
-    class Wizard
+    class Archer
     {
-        //nev
-        private string name = "Fiona";
+     //nev
+        private string name = "Hawk";
         public string GetName
         {
             get { return name; }
@@ -20,15 +20,19 @@ namespace DemoGame
         {
             get { return health; }
         }
+        public int SetHealth
+        {
+            set { health = value; }
+        }
         //szint
         private int level = 1;
         public int GetLevel
         {
             get { return level; }
         }
-        public void Levelup()
+        public int SetLevel
         {
-            level++;
+            set { level = value; }
         }
         //tapasztalatpont
         private int experience = 0;
@@ -148,9 +152,9 @@ namespace DemoGame
         {
             set { defence = value; }
         }
-        public void Defence(int vedekezes)
+        public void Defence()
         {
-            
+
         }
     }
 }
