@@ -31,9 +31,6 @@ namespace DemoGame
                     break;
                 }
             } while (true);
-
-            Console.WriteLine("Adja meg a nevet");
-            string bekerplayer = Console.ReadLine();
             Map.maps(bekerellenfel,bekerkarakter);
             player.karakter(bekerkarakter);
             viewhelp.viewhelps();

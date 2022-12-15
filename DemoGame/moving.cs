@@ -17,6 +17,7 @@ namespace DemoGame
             {
                 Console.WriteLine(
                     "Adja meg mit szeretne tenni:Mozgás(előre v hátra), támadás(1,2,3), item haszálni (bandage,poti,medkit,jugjug)");
+                Item healek = new Item();
                 string beker = Console.ReadLine();
                 if (beker=="előre")
                 {
@@ -71,6 +72,76 @@ namespace DemoGame
                         }
                     }
                 }
+                else if (beker=="bandage")
+                {
+                    if (player.inv[0]<=1)
+                    {
+                        player.jatekos[0] += healek.GetBandage ;
+                        if (player.jatekos[0]>100)
+                        {
+                            player.jatekos[0] = 100;
+                        }
+                        player.inv[0]--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nincsen bandaged");
+                        
+                    }
+                }
+                else if (beker=="poti")
+                {
+                    if (player.inv[1] <= 1)
+                    {
+                        player.jatekos[1] += healek.GetPoti;
+                        if (player.jatekos[0] > 100)
+                        {
+                            player.jatekos[0] = 100;
+                        }
+
+                        player.inv[1]--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nincsen potid");
+                        
+                    }
+                }
+                else if (beker == "medkit")
+                {
+                    if (player.inv[2]<=1)
+                    {
+                        player.jatekos[2] += healek.GetMedkit;
+                        if (player.jatekos[0] > 100)
+                        {
+                            player.jatekos[0] = 100;
+                        }
+                        player.inv[2]--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nincsen medkited");
+                    }
+                }
+                else if (beker=="jugjug")
+                {
+                    if (player.inv[3] <= 1)
+                    {
+                        player.jatekos[3] += healek.GetJugjug;
+                        if (player.jatekos[0] > 100)
+                        {
+                            player.jatekos[0] = 100;
+                        }
+
+                        player.inv[3]--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nincsen jugjugod");
+                    }
+                }
+                
+
 
                 for (int i = 0; i < viewhelp.palya.Length; i++)
                 {

@@ -59,15 +59,15 @@ namespace DemoGame
                 Warrior warrior = new Warrior();
                 if (ellenfel == "fallen")
                 {
-                    warrior.SetBasicAttack1 = rnd.Next(12, 15);
-                    warrior.SetBasicAttack2 = rnd.Next(12, 16);
-                    warrior.SetBasicAttack3 = rnd.Next(12, 17);
+                    warrior.SetBasicAttack1 = rnd.Next(15, 18);
+                    warrior.SetBasicAttack2 = rnd.Next(15, 16);
+                    warrior.SetBasicAttack3 = rnd.Next(15, 20);
                 }
                 else
                 {
-                    warrior.SetBasicAttack1 = rnd.Next(10, 13);
-                    warrior.SetBasicAttack2 = rnd.Next(10, 14);
-                    warrior.SetBasicAttack3 = rnd.Next(10, 15);
+                    warrior.SetBasicAttack1 = rnd.Next(13, 15);
+                    warrior.SetBasicAttack2 = rnd.Next(13, 16);
+                    warrior.SetBasicAttack3 = rnd.Next(13, 17);
                 }
             }
 			

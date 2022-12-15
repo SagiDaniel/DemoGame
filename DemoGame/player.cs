@@ -85,11 +85,11 @@ namespace DemoGame
             inv[6] = inventory.GetLegs;
             inv[7] = inventory.GetShoes;
 
-            jatekos[0] =+ skilltree.Maxhap;
-            jatekos[4] =+ skilltree.Tamadas;
-            jatekos[5] =+ skilltree.Tamadas;
-            jatekos[6] =+ skilltree.Tamadas;
-            jatekos[7] =+ skilltree.Vedekezes;
+            jatekos[0] += skilltree.Maxhap;
+            jatekos[4] += skilltree.Tamadas;
+            jatekos[5] += skilltree.Tamadas;
+            jatekos[6] += skilltree.Tamadas;
+            jatekos[7] += skilltree.Vedekezes;
 
 
         }
