@@ -214,7 +214,7 @@ namespace DemoGame
                 {
                     kiras = kiras + map.palya[i];
                 }
-                var table = new ConsoleTable("Heal",$"{bekerkarakter} {player.jatekos[0]}hp","Armor");
+                var table = new ConsoleTable("Heal:",$"{bekerkarakter} {player.jatekos[0]}hp","Armor:");
                 table.AddRow($"Bandage: {player.inv[0]}"," " , $"Head: {player.inv[4]}");
                 table.AddRow($"Poti: {player.inv[1]}",kiras , $"Stomach: {player.inv[5]}");
                 table.AddRow($"Medkit: {player.inv[2]}"," " , $"Legs: {player.inv[6]}");
