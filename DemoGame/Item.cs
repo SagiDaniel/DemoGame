@@ -8,29 +8,29 @@ namespace DemoGame
     public class Item
     {
         //healek
-            private int Bandage = 15;
+            private int Bandage ;
 
             public int GetBandage => Bandage;
 
-            private int Poti = 5;
+            private int Poti;
             public int GetPoti => Poti;
-            private int Medkit = 50;
+            private int Medkit;
             public int GetMedkit=> Medkit;
-            private int Jugjug = 75;
+            private int Jugjug;
             public int GetJugjug => Jugjug;
         
             //Armor
-            private int head = 40;
+            private int head;
 
             public int GetHead => head;
-            private int stomach = 40;
+            private int stomach;
 
             public int GetStomach => stomach;
-            private int legs = 20;
+            private int legs;
 
             public int GetLegs => legs;
             //move
-            private int shoes = 2;
+            private int shoes;
             public int GetShoes => shoes;
     }
 }

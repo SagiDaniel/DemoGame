@@ -49,14 +49,14 @@ namespace DemoGame
                 }
                 else if (mitcsinal=="kilép")
                 {
-                    System.Environment.Exit(-1);
+                    System.Environment.Exit(0);
                 }
                 else
                 {
                     Console.WriteLine("Nem jót adott meg");
                 }
                 Console.WriteLine("Mit szeretne csinálni(bolt,harc,kilép)");
-                break;
+                
             } while (true);
             Console.ReadKey();
         }

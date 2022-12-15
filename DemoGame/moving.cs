@@ -1,4 +1,6 @@
 using System;
+using System.Data;
+using ConsoleTables;
 namespace DemoGame
 {
     public class moving
@@ -13,38 +15,34 @@ namespace DemoGame
                     "Adja meg mit szeretne tenni:Mozgás(előre v hátra), támadás(támadás), item haszálni (bandage,poti,medkit,jugjug), menekülés(kilép)");
                 Item healek = new Item();
                 string beker = Console.ReadLine();
+                int halaly = 0;
+                int halalx = 0;
                 if (beker=="előre")
                 {
-                    int ezaz = 0;
-                    int lokes = 0;
                     for (int j = 0; j < map.palya.Length; j++)
                     {
-                        if (lokes!=0)
-                        {
-                            map.palya[j+1] = "Y";
-                            break;
-                            enemies.En();
-                        }
-                        if (ezaz==1)
-                        {
-                            map.palya[j] = "X";
-                            ezaz = 0;
-                            break;
-                            enemies.En();
-                        }
                         if (map.palya[j] == "X")
                         {
                             if (map.palya[j + 1] == "Y"&&j<6)
                             {
                                 map.palya[j + 1] = "_";
-                                lokes++;
+                                map.palya[j + 2] = "Y";
+                                break;
                             }
-                            else if (j==6) {}
+                            else if (j == 6)
+                            {
+                                enemies.Enemy[0]-=10;
+                                if (enemies.Enemy[0]<=0)
+                                {
+                                    halaly++;
+                                }
+                            }
                             else
                             {
-                                ezaz++;
                                 map.palya[j] = "_";
+                                map.palya[j+1] = "X";
                                 enemies.En();
+                                break;
                             }
                         }
                     }
@@ -163,8 +161,8 @@ namespace DemoGame
                                     enemies.Enemy[0]-=player.jatekos[6];
                                     rand=rnd.Next(1, 4);
                                 }
-                            break;    
                             }
+                            break; 
                         }
                     }
                     else
@@ -185,7 +183,14 @@ namespace DemoGame
                             rand=rnd.Next(1, 4);
                         }
                     }
-                    enemies.En();
+                    if (enemies.Enemy[0]<=0)
+                    {
+                        halaly++;
+                    }
+                    if (halaly==0)
+                    {
+                        enemies.En();
+                    }
                 }
                 if (beker=="kilép")
                 {
@@ -203,12 +208,19 @@ namespace DemoGame
                 {
                     break;
                 }
+
+                string kiras = "";
                 for (int i = 0; i < map.palya.Length; i++)
                 {
-                    Console.Write(map.palya[i]);
+                    kiras = kiras + map.palya[i];
                 }
-                Console.WriteLine();
-            } while (false);
+                var table = new ConsoleTable("Heal",$"{bekerkarakter} {player.jatekos[0]}hp","Armor");
+                table.AddRow($"Bandage: {player.inv[0]}"," " , $"Head: {player.inv[4]}");
+                table.AddRow($"Poti: {player.inv[1]}",kiras , $"Stomach: {player.inv[5]}");
+                table.AddRow($"Medkit: {player.inv[2]}"," " , $"Legs: {player.inv[6]}");
+                table.AddRow($"Jugjug: {player.inv[3]}",$"Ellenfél: {enemies.Enemy[0]}hp" , $"Shoes: {player.inv[7]}");
+                table.Write();
+            } while (true);
         }
     }
 }
