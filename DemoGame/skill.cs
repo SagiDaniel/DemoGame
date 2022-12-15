@@ -7,24 +7,23 @@ namespace DemoGame
         private int tamadas=0;
         private int vedekezes=0;
         private int maxhap=0;
-        private int hpregen=0;
 
         public int Tamadas
         {
             get => tamadas;
-            set => tamadas =tamadas++;
+            set => tamadas =tamadas+5;
         }
 
         public int Vedekezes
         {
             get => vedekezes;
-            set => vedekezes = vedekezes++;
+            set => vedekezes = vedekezes+5;
         }
 
         public int Maxhap
         {
             get => maxhap;
-            set => maxhap = maxhap++;
+            set => maxhap = maxhap+5;
         }
         
     }

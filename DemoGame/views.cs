@@ -3,8 +3,6 @@ using System.Data;
 using System.Xml.XPath;
 using DemoGame;
 
-
-
 namespace DemoGame
 {
     public class Views
@@ -37,9 +35,8 @@ namespace DemoGame
             Console.WriteLine("Adja meg a nevet");
             string bekerplayer = Console.ReadLine();
             Map.maps(bekerellenfel,bekerkarakter);
-            move.moving();
-            Console.WriteLine(bekerkarakter);
-            Console.WriteLine(bekerellenfel);
+            player.karakter(bekerkarakter);
+            viewhelp.viewhelps();
             Console.WriteLine();
             Console.ReadKey();
         }

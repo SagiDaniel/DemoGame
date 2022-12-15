@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DemoGame
 {
     public class Archer
@@ -16,8 +18,10 @@ namespace DemoGame
         }
         public int SetHealth
         {
+            
             set { health = value; }
         }
+
         //szint
         private int level = 1;
         public int GetLevel
