@@ -7,15 +7,24 @@ namespace DemoGame
     {
         public static void move(string bekerkarakter, string bekeenemy)
         {
+            Random rnd = new Random();
+            int rand = rnd.Next(1, 4);
             do
             {
-                Random rnd = new Random();
-                int rand = rnd.Next(1, 4);
+                string kiras = "";
+                for (int i = 0; i < map.palya.Length; i++)
+                {
+                    kiras = kiras + map.palya[i];
+                }
+                var table = new ConsoleTable("Heal:",$"{bekerkarakter} {player.jatekos[0]}hp + {armor.GetPlayerarmor}","Armor:");
+                table.AddRow($"Bandage: {player.inv[0]}"," " , $"Head: {player.inv[4]}");
+                table.AddRow($"Poti: {player.inv[1]}",kiras , $"Stomach: {player.inv[5]}");
+                table.AddRow($"Medkit: {player.inv[2]}"," " , $"Legs: {player.inv[6]}");
+                table.AddRow($"Jugjug: {player.inv[3]}",$"{bekeenemy} Kingdom: {enemies.Enemy[0]}hp" , $"Shoes: {player.inv[7]}");
+                table.Write();
                 Console.WriteLine("Adja meg mit szeretne tenni:Mozgás(előre v hátra), támadás(támadás), item haszálni (bandage,poti,medkit,jugjug), menekülés(kilép)");
                 Item healek = new Item();
                 string beker = Console.ReadLine();
-                int halaly = 0;
-                int halalx = 0;
                 if (beker=="előre")
                 {
                     for (int j = 0; j < map.palya.Length; j++)
@@ -70,9 +79,9 @@ namespace DemoGame
                     if (player.inv[0]<=1)
                     {
                         player.jatekos[0] += healek.GetBandage ;
-                        if (player.jatekos[0]>100)
+                        if (player.jatekos[0]>130)
                         {
-                            player.jatekos[0] = 100;
+                            player.jatekos[0] = 130;
                         }
                         player.inv[0]--;
                     }
@@ -88,9 +97,9 @@ namespace DemoGame
                     if (player.inv[1] <= 1)
                     {
                         player.jatekos[1] += healek.GetPoti;
-                        if (player.jatekos[0] > 100)
+                        if (player.jatekos[0] > 130)
                         {
-                            player.jatekos[0] = 100;
+                            player.jatekos[0] = 130;
                         }
 
                         player.inv[1]--;
@@ -107,9 +116,9 @@ namespace DemoGame
                     if (player.inv[2]<=1)
                     {
                         player.jatekos[2] += healek.GetMedkit;
-                        if (player.jatekos[0] > 100)
+                        if (player.jatekos[0] > 130)
                         {
-                            player.jatekos[0] = 100;
+                            player.jatekos[0] = 130;
                         }
                         player.inv[2]--;
                     }
@@ -124,9 +133,9 @@ namespace DemoGame
                     if (player.inv[3] <= 1)
                     {
                         player.jatekos[3] += healek.GetJugjug;
-                        if (player.jatekos[0] > 100)
+                        if (player.jatekos[0] > 130)
                         {
-                            player.jatekos[0] = 100;
+                            player.jatekos[0] = 130;
                         }
 
                         player.inv[3]--;
@@ -160,8 +169,8 @@ namespace DemoGame
                                     enemies.Enemy[0]-=player.jatekos[6];
                                     rand=rnd.Next(1, 4);
                                 }
+                                break; 
                             }
-                            break; 
                         }
                     }
                     else
@@ -184,7 +193,6 @@ namespace DemoGame
                     }
                     if (enemies.Enemy[0]<=0)
                     {
-                        
                         for (int i = 0; i < map.palya.Length; i++)
                         {
                             if (map.palya[i]=="Y")
@@ -193,25 +201,12 @@ namespace DemoGame
                             }
                         }
                     }
-                    
-                        enemies.En();
-                    
+                    enemies.En();
                 }
                 if (beker=="kilép")
                 {
                     break;
                 }
-                string kiras = "";
-                for (int i = 0; i < map.palya.Length; i++)
-                {
-                    kiras = kiras + map.palya[i];
-                }
-                var table = new ConsoleTable("Heal:",$"{bekerkarakter} {player.jatekos[0]}hp","Armor:");
-                table.AddRow($"Bandage: {player.inv[0]}"," " , $"Head: {player.inv[4]}");
-                table.AddRow($"Poti: {player.inv[1]}",kiras , $"Stomach: {player.inv[5]}");
-                table.AddRow($"Medkit: {player.inv[2]}"," " , $"Legs: {player.inv[6]}");
-                table.AddRow($"Jugjug: {player.inv[3]}",$"Ellenfél: {enemies.Enemy[0]}hp" , $"Shoes: {player.inv[7]}");
-                table.Write();
                 if (player.jatekos[0]<=0)
                 {
                     Console.WriteLine("Vesztettél");

@@ -28,7 +28,7 @@ namespace DemoGame
          atc
          def
          */
-        public static int[] Enemy= new int[3]{100,10,5};
+        public static int[] Enemy= new int[3]{100,10,0};
         public static int[] GetEnemys
         {
             get => Enemy;
@@ -45,25 +45,25 @@ namespace DemoGame
                     {
                         
                         Enemy[0] = 120;
-                        Enemy[1] = 12;
+                        Enemy[1] = 15;
                     }
                     else if(Lloydmap[2]==1)
                     {
                         
                         Enemy[0] = 140;
-                        Enemy[1] = 14;
+                        Enemy[1] = 20;
                     }
                     else if(Lloydmap[3]==1)
                     {
                         
                         Enemy[0] = 160;
-                        Enemy[1] = 16;
+                        Enemy[1] = 25;
                     }
                     else if(Lloydmap[4]==1)
                     {
                         
                         Enemy[0] = 180;
-                        Enemy[1] = 18;
+                        Enemy[1] = 30;
                     }
                     if (Lloydmap[i]==1)
                     {
@@ -84,25 +84,25 @@ namespace DemoGame
                     {
                        
                         Enemy[0] = 120;
-                        Enemy[1] = 12;
+                        Enemy[1] = 15;
                     }
                     else if(Fallenmap[2]==1)
                     {
                         
                         Enemy[0] = 140;
-                        Enemy[1] = 14;
+                        Enemy[1] = 20;
                     }
                     else if(Fallenmap[3]==1)
                     {
                         
                         Enemy[0] = 160;
-                        Enemy[1] = 16;
+                        Enemy[1] = 25;
                     }
                     else if(Fallenmap[4]==1)
                     {
                         
                         Enemy[0] = 180;
-                        Enemy[1] = 18;
+                        Enemy[1] = 30;
                     }
                     if (Fallenmap[i]==1)
                     {
@@ -123,25 +123,25 @@ namespace DemoGame
                     {
                       
                         Enemy[0] = 120;
-                        Enemy[1] = 12;
+                        Enemy[1] = 15;
                     }
                     else if(Kingdomnmap[2]==1)
                     {
                        
                         Enemy[0] = 140;
-                        Enemy[1] = 14;
+                        Enemy[1] = 20;
                     }
                     else if(Kingdomnmap[3]==1)
                     {
                         
                         Enemy[0] = 160;
-                        Enemy[1] = 16;
+                        Enemy[1] = 25;
                     }
                     else if(Kingdomnmap[4]==1)
                     {
                         
                         Enemy[0] = 180;
-                        Enemy[1] = 18;
+                        Enemy[1] = 30;
                     }
                     if (Kingdomnmap[i]==1)
                     {
@@ -155,17 +155,15 @@ namespace DemoGame
                 }
             }
         }
-
         public static void En()
         {
-            int damage = 10;
             for (int i = map.palya.Length - 1; i >= 0; i--)
             {
                 if (map.palya[i]=="Y")
                 {
                     if (map.palya[i-1]=="X")
                     {
-                        player.jatekos[0] -= damage;
+                       armor.Enemydamage();
                     }
                     else
                     {

@@ -3,7 +3,6 @@ using System.Configuration;
 using System.Data;
 using System.Xml.XPath;
 using DemoGame;
-
 namespace DemoGame
 {
     public class player

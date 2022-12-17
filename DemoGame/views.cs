@@ -3,7 +3,6 @@ using System.Data;
 using System.Net.Mime;
 using System.Xml.XPath;
 using DemoGame;
-
 namespace DemoGame
 {
     public class Views
@@ -32,7 +31,7 @@ namespace DemoGame
                     break;
                 }
             } while (true);
-            playeratc.playerattack(bekerellenfel,bekerkarakter);
+            Playeratc.playerattack(bekerellenfel,bekerkarakter);
             player.karakter(bekerkarakter);
             Console.WriteLine("Mit szeretne csinálni(bolt,harc,kilép)");
             string mitcsinal = "";
@@ -45,25 +44,24 @@ namespace DemoGame
                 }
                 else if (mitcsinal == "harc")
                 {
+                    armor.Heroarmor();
                     map.maps(bekerkarakter,bekerellenfel);
                 }
                 else if (mitcsinal=="kilép")
                 {
                     System.Environment.Exit(0);
+
                 }
                 else if (mitcsinal == "coin")
                 {
                     player.jatekos[3] += 1000;
-                    Console.WriteLine(player.jatekos[4]);
                 }
                 else
                 {
                     Console.WriteLine("Nem jót adott meg");
                 }
                 Console.WriteLine("Mit szeretne csinálni(bolt,harc,kilép)");
-                
             } while (true);
-            Console.ReadKey();
         }
     }
 }

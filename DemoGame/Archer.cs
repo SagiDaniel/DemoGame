@@ -18,10 +18,8 @@ namespace DemoGame
         }
         public int SetHealth
         {
-            
             set { health = value; }
         }
-
         //szint
         private int level = 1;
         public int GetLevel
@@ -78,10 +76,6 @@ namespace DemoGame
         {
             set { skill = value; }
         }
-        public void Skill()
-        {
-
-        }
         //location
 
         //basic attack 1
@@ -94,10 +88,6 @@ namespace DemoGame
         {
             set { basicAttack1 = value; }
         }
-        public void BasicAttack1()
-        {
-
-        }
         //basic attack 2
         private int basicAttack2;
         public int GetBasicAttack2
@@ -107,10 +97,6 @@ namespace DemoGame
         public int SetBasicAttack2
         {
             set { basicAttack2 = value; }
-        }
-        public void BasicAttack2()
-        {
-
         }
         //basic attack 3
         private int basicAttack3;
@@ -122,24 +108,6 @@ namespace DemoGame
         {
             set { basicAttack3 = value; }
         }
-        public void BasicAttack3()
-        {
-
-        }
-        //ulti 
-        private int ultimateAttack;
-        public int GetUltimateAttack
-        {
-            get { return ultimateAttack; }
-        }
-        public int SetUltimateAttack
-        {
-            set { ultimateAttack = value; }
-        }
-        public void UltimateAttack()
-        {
-
-        }
         //defence
         private int defence=0;
         public int GetDefence
@@ -149,10 +117,6 @@ namespace DemoGame
         public int SetDefence
         {
             set { defence = value; }
-        }
-        public void Defence()
-        {
-
         }
     }
 }

@@ -39,19 +39,19 @@ namespace DemoGame
             {
                 if (beker=="hp")
                 {
-                    if (maxhap[0]=="-")
+                    if (maxhap[0]!="-")
                     {
-                        maxhap.SetValue("-",1);
+                        GetMaxhap[0]="-";
                         player.jatekos[0] = 110;
                     }
-                    else if(maxhap[1]=="-")
+                    else if(maxhap[1]!="-")
                     {
-                        maxhap.SetValue("-",2);
+                        GetMaxhap[1]="-";
                         player.jatekos[0] = 120;
                     }
                     else if (maxhap[0]==".")
                     {
-                        maxhap.SetValue("-",0);
+                        GetMaxhap[0]="-";
                         player.jatekos[0] = 130;
                     }
                     Console.WriteLine($"Fejlesztette a karakter max hp szintét, mostantól a karakternek:{player.jatekos[0]} életereje lesz");
@@ -60,26 +60,26 @@ namespace DemoGame
                 else if (beker == "támadás")
                 {
                     int i = 0;
-                    if (tamadas[0]=="-")
+                    if (tamadas[0]!="-")
                     {
-                        tamadas[1] = "-";
+                        GetTamadas[0]="-";
                         player.jatekos[4] += 10;
                         player.jatekos[5] += 10;
                         player.jatekos[6] += 10;
                         i = 10;
                     }
-                    else if(tamadas[1]=="-")
+                    else if(tamadas[1]!="-")
                     {
-                        tamadas[2] = "-";
+                        GetTamadas[1]="-";
                         player.jatekos[0] = 120;
                         player.jatekos[4] += 20;
                         player.jatekos[5] += 20;
                         player.jatekos[6] += 20;
                         i = 20;
                     }
-                    else if (tamadas[0]==".")
+                    else if (tamadas[2]==".")
                     {
-                        tamadas[0] = "-";
+                        tamadas[2] = "-";
                         player.jatekos[0] = 130;
                         player.jatekos[4] += 30;
                         player.jatekos[5] += 30;
@@ -92,19 +92,19 @@ namespace DemoGame
                 else if (beker == "védekezés")
                 {
 
-                    if (vedekezes[0] == "-")
+                    if (vedekezes[0] != "-")
                     {
-                        vedekezes.SetValue("-", 1);
+                        GetVedekezes[0]="-";
                         player.jatekos[7] = 5;
                     }
-                    else if (vedekezes[1] == "-")
+                    else if (vedekezes[1] != "-")
                     {
-                        vedekezes.SetValue("-", 2);
+                        GetVedekezes[1]="-";
                         player.jatekos[7] = 10;
                     }
                     else if (vedekezes[0] == ".")
                     {
-                        vedekezes.SetValue("-", 0);
+                        GetVedekezes[0]="-";
                         player.jatekos[7] = 15;
                     }
 

@@ -76,67 +76,32 @@ namespace DemoGame
         {
             set { skill = value; }
         }
-        public void Skill()
-        {
-
-        }
         //location
 
         //basic attack 1
         private int basicAttack1;
+
         public int GetBasicAttack1
         {
-            get { return basicAttack1; }
-        }
-        public int SetBasicAttack1
-        {
-            set { basicAttack1 = value; }
-        }
-        public void BasicAttack1()
-        {
-
+            get => basicAttack1;
+            set => basicAttack1 = value;
         }
         //basic attack 2
         private int basicAttack2;
+
         public int GetBasicAttack2
         {
-            get { return basicAttack2; }
+            get => basicAttack2;
+            set => basicAttack2 = value;
         }
-        public int SetBasicAttack2
-        {
-            set { basicAttack2 = value; }
-        }
-        public void BasicAttack2()
-        {
 
-        }
         //basic attack 3
         private int basicAttack3;
+
         public int GetBasicAttack3
         {
-            get { return basicAttack3; }
-        }
-        public int SetBasicAttack3
-        {
-            set { basicAttack3 = value; }
-        }
-        public void BasicAttack3()
-        {
-
-        }
-        //ulti 
-        private int ultimateAttack;
-        public int GetUltimateAttack
-        {
-            get { return ultimateAttack; }
-        }
-        public int SetUltimateAttack
-        {
-            set { ultimateAttack = value; }
-        }
-        public void UltimateAttack()
-        {
-
+            get => basicAttack3;
+            set => basicAttack3 = value;
         }
         //defence
         private int defence=0;
@@ -147,10 +112,6 @@ namespace DemoGame
         public int SetDefence
         {
             set { defence = value; }
-        }
-        public void Defence(int vedekezes)
-        {
-            
         }
     }
 }

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Archer.cs" />
     <Compile Include="Enemies.cs" />
+    <Compile Include="armor.cs" />
     <Compile Include="HostileNPC.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="playeratc.cs" />

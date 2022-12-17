@@ -76,10 +76,6 @@ namespace DemoGame
         {
             set { skill = value; }
         }
-        public void Skill()
-        {
-
-        }
         //location
 
         //basic attack 1
@@ -121,10 +117,6 @@ namespace DemoGame
         public int SetDefence
         {
             set { defence = value; }
-        }
-        public void Defence()
-        {
-
         }
     }
 }
