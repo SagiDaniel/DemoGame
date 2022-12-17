@@ -32,8 +32,8 @@ namespace DemoGame
                     break;
                 }
             } while (true);
+            playeratc.playerattack(bekerellenfel,bekerkarakter);
             player.karakter(bekerkarakter);
-            DemoGame.playeratc.playerattack(bekerellenfel,bekerkarakter);
             Console.WriteLine("Mit szeretne csinálni(bolt,harc,kilép)");
             string mitcsinal = "";
             do
@@ -45,11 +45,16 @@ namespace DemoGame
                 }
                 else if (mitcsinal == "harc")
                 {
-                    map.maps(bekerkarakter);
+                    map.maps(bekerkarakter,bekerellenfel);
                 }
                 else if (mitcsinal=="kilép")
                 {
                     System.Environment.Exit(0);
+                }
+                else if (mitcsinal == "coin")
+                {
+                    player.jatekos[3] += 1000;
+                    Console.WriteLine(player.jatekos[4]);
                 }
                 else
                 {

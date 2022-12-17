@@ -34,16 +34,138 @@ namespace DemoGame
             get => Enemy;
             set => Enemy = value;
         }
+
+        public static void Enemylevel(string bekerenemy)
+        {
+            if (bekerenemy=="lloyd")
+            {
+                for (int i = 0; i <Lloydmap.Length; i++)
+                {
+                    if (Lloydmap[1]==1)
+                    {
+                        
+                        Enemy[0] = 120;
+                        Enemy[1] = 12;
+                    }
+                    else if(Lloydmap[2]==1)
+                    {
+                        
+                        Enemy[0] = 140;
+                        Enemy[1] = 14;
+                    }
+                    else if(Lloydmap[3]==1)
+                    {
+                        
+                        Enemy[0] = 160;
+                        Enemy[1] = 16;
+                    }
+                    else if(Lloydmap[4]==1)
+                    {
+                        
+                        Enemy[0] = 180;
+                        Enemy[1] = 18;
+                    }
+                    if (Lloydmap[i]==1)
+                    {
+                        Lloydmap[i] = 0;
+                        if (i<4)
+                        {
+                            Lloydmap[i + 1] = 1;
+                        }
+                        break;
+                    }
+                }
+            }
+            else if (bekerenemy=="fallen")
+            {
+                for (int i = 0; i <Fallenmap.Length; i++)
+                {
+                    if (Fallenmap[1]==1)
+                    {
+                       
+                        Enemy[0] = 120;
+                        Enemy[1] = 12;
+                    }
+                    else if(Fallenmap[2]==1)
+                    {
+                        
+                        Enemy[0] = 140;
+                        Enemy[1] = 14;
+                    }
+                    else if(Fallenmap[3]==1)
+                    {
+                        
+                        Enemy[0] = 160;
+                        Enemy[1] = 16;
+                    }
+                    else if(Fallenmap[4]==1)
+                    {
+                        
+                        Enemy[0] = 180;
+                        Enemy[1] = 18;
+                    }
+                    if (Fallenmap[i]==1)
+                    {
+                        Fallenmap[i] = 0;
+                        if (i<4)
+                        {
+                            Fallenmap[i + 1] = 1;
+                        }
+                        break;
+                    }
+                }
+            }
+            else if ("Kingdom" == bekerenemy)
+            {
+                for (int i = 0; i <Kingdomnmap.Length; i++)
+                {
+                    if (Kingdomnmap[1]==1)
+                    {
+                      
+                        Enemy[0] = 120;
+                        Enemy[1] = 12;
+                    }
+                    else if(Kingdomnmap[2]==1)
+                    {
+                       
+                        Enemy[0] = 140;
+                        Enemy[1] = 14;
+                    }
+                    else if(Kingdomnmap[3]==1)
+                    {
+                        
+                        Enemy[0] = 160;
+                        Enemy[1] = 16;
+                    }
+                    else if(Kingdomnmap[4]==1)
+                    {
+                        
+                        Enemy[0] = 180;
+                        Enemy[1] = 18;
+                    }
+                    if (Kingdomnmap[i]==1)
+                    {
+                        Kingdomnmap[i] = 0;
+                        if (i<4)
+                        {
+                            Kingdomnmap[i + 1] = 1;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
         public static void En()
         {
-            
+            int damage = 10;
             for (int i = map.palya.Length - 1; i >= 0; i--)
             {
                 if (map.palya[i]=="Y")
                 {
                     if (map.palya[i-1]=="X")
                     {
-                        player.jatekos[0] -= 10;
+                        player.jatekos[0] -= damage;
                     }
                     else
                     {

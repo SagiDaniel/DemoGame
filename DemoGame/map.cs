@@ -8,7 +8,7 @@ namespace DemoGame
     public class map
     {
         public static string[] palya = new string[9];
-        public static void maps(string bekerkarakter)
+        public static void maps(string bekerkarakter,string bekerellenfel)
         {
             
             for (int i = 0; i < palya.Length; i++)
@@ -31,12 +31,7 @@ namespace DemoGame
                     palya[i] = "|";
                 }
             }
-
-            for (int i = 0; i < palya.Length; i++)
-            {
-                Console.Write(palya[i]);
-            }
-            moving.move(bekerkarakter);
+            moving.move(bekerkarakter,bekerellenfel);
         }
     }
 }

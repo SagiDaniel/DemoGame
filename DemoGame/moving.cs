@@ -5,14 +5,13 @@ namespace DemoGame
 {
     public class moving
     {
-        public static void move(string bekerkarakter)
+        public static void move(string bekerkarakter, string bekeenemy)
         {
             do
             {
                 Random rnd = new Random();
                 int rand = rnd.Next(1, 4);
-                Console.WriteLine(
-                    "Adja meg mit szeretne tenni:Mozgás(előre v hátra), támadás(támadás), item haszálni (bandage,poti,medkit,jugjug), menekülés(kilép)");
+                Console.WriteLine("Adja meg mit szeretne tenni:Mozgás(előre v hátra), támadás(támadás), item haszálni (bandage,poti,medkit,jugjug), menekülés(kilép)");
                 Item healek = new Item();
                 string beker = Console.ReadLine();
                 int halaly = 0;
@@ -34,7 +33,7 @@ namespace DemoGame
                                 enemies.Enemy[0]-=10;
                                 if (enemies.Enemy[0]<=0)
                                 {
-                                    halaly++;
+                                    map.palya[j] = "_";
                                 }
                             }
                             else
@@ -185,30 +184,23 @@ namespace DemoGame
                     }
                     if (enemies.Enemy[0]<=0)
                     {
-                        halaly++;
+                        
+                        for (int i = 0; i < map.palya.Length; i++)
+                        {
+                            if (map.palya[i]=="Y")
+                            {
+                                map.palya[i] = "_";
+                            }
+                        }
                     }
-                    if (halaly==0)
-                    {
+                    
                         enemies.En();
-                    }
+                    
                 }
                 if (beker=="kilép")
                 {
                     break;
                 }
-                int halal = 0;
-                for (int i = 0; i < map.palya.Length; i++)
-                {
-                    if (map.palya[i]=="Y")
-                    {
-                        halal++;
-                    }
-                }
-                if (halal == 0)
-                {
-                    break;
-                }
-
                 string kiras = "";
                 for (int i = 0; i < map.palya.Length; i++)
                 {
@@ -220,6 +212,18 @@ namespace DemoGame
                 table.AddRow($"Medkit: {player.inv[2]}"," " , $"Legs: {player.inv[6]}");
                 table.AddRow($"Jugjug: {player.inv[3]}",$"Ellenfél: {enemies.Enemy[0]}hp" , $"Shoes: {player.inv[7]}");
                 table.Write();
+                if (player.jatekos[0]<=0)
+                {
+                    Console.WriteLine("Vesztettél");
+                    break;
+                }
+                if (enemies.Enemy[0]<=0)
+                {
+                    Console.WriteLine("Win");
+                    enemies.Enemylevel(bekeenemy);
+                    Skill.skilltree();
+                    break;
+                }
             } while (true);
         }
     }

@@ -139,7 +139,7 @@ namespace DemoGame
 
         }
         //defence
-        private int defence;
+        private int defence=0;
         public int GetDefence
         {
             get { return defence; }

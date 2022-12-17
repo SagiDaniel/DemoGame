@@ -35,10 +35,8 @@ namespace DemoGame
          */
         public static int[] jatekos = new int[8];
         public static int[] inv=new int[8];
-
         public static void karakter(string bekerkarakter)
         {
-            Skill skilltree = new Skill();
             if ("fiora" == bekerkarakter)
             {
                 Wizard seged = new Wizard();
@@ -84,14 +82,7 @@ namespace DemoGame
             inv[5] = inventory.GetStomach;
             inv[6] = inventory.GetLegs;
             inv[7] = inventory.GetShoes;
-
-            jatekos[0] += skilltree.Maxhap;
-            jatekos[4] += skilltree.Tamadas;
-            jatekos[5] += skilltree.Tamadas;
-            jatekos[6] += skilltree.Tamadas;
-            jatekos[7] += skilltree.Vedekezes;
-
-
+            
         }
     }
 }
