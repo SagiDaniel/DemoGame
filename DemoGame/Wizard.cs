@@ -97,7 +97,7 @@ namespace DemoGame
 
         //basic attack 3
         private int basicAttack3;
-
+        
         public int GetBasicAttack3
         {
             get => basicAttack3;

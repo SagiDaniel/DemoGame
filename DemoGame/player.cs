@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data;
 using System.Xml.XPath;
 using DemoGame;
+
 namespace DemoGame
 {
     public class player
@@ -33,7 +34,8 @@ namespace DemoGame
          maxhp
          */
         public static int[] jatekos = new int[8];
-        public static int[] inv=new int[8];
+        public static int[] inv = new int[8];
+
         public static void karakter(string bekerkarakter)
         {
             if ("fiora" == bekerkarakter)
@@ -72,6 +74,7 @@ namespace DemoGame
                 jatekos[6] = seged.GetBasicAttack3;
                 jatekos[7] = seged.GetDefence;
             }
+
             Item inventory = new Item();
             inv[0] = inventory.GetBandage;
             inv[1] = inventory.GetPoti;
@@ -81,7 +84,6 @@ namespace DemoGame
             inv[5] = inventory.GetStomach;
             inv[6] = inventory.GetLegs;
             inv[7] = inventory.GetShoes;
-            
         }
     }
 }

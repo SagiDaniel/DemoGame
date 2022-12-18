@@ -60,6 +60,7 @@
     <Compile Include="map.cs" />
     <Compile Include="views.cs" />
     <Compile Include="Warrior.cs" />
+    <Compile Include="win.cs" />
     <Compile Include="Wizard.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -38,7 +38,7 @@ namespace DemoGame
 
     public static void Enemydamage()
         {
-            if (GetPlayerarmor>1)
+            if (GetPlayerarmor>0)
             {
                 GetPlayerarmor -= enemies.Enemy[1];
                 if (GetPlayerarmor<1)

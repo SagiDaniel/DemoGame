@@ -44,8 +44,8 @@ namespace DemoGame
                     if (Lloydmap[1]==1)
                     {
                         
-                        Enemy[0] = 120;
-                        Enemy[1] = 15;
+                        Enemy[0] = 100;
+                        Enemy[1] = 10;
                     }
                     else if(Lloydmap[2]==1)
                     {
@@ -83,8 +83,8 @@ namespace DemoGame
                     if (Fallenmap[1]==1)
                     {
                        
-                        Enemy[0] = 120;
-                        Enemy[1] = 15;
+                        Enemy[0] = 100;
+                        Enemy[1] = 10;
                     }
                     else if(Fallenmap[2]==1)
                     {
@@ -122,8 +122,8 @@ namespace DemoGame
                     if (Kingdomnmap[1]==1)
                     {
                       
-                        Enemy[0] = 120;
-                        Enemy[1] = 15;
+                        Enemy[0] = 100;
+                        Enemy[1] = 10;
                     }
                     else if(Kingdomnmap[2]==1)
                     {

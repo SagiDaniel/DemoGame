@@ -129,10 +129,10 @@ namespace DemoGame
                     case "shoes":
                         if (player.inv[7]==0)
                         {
-                            if (player.jatekos[3]>=35)
+                            if (player.jatekos[3]>=25)
                             {
                                 player.inv[7]++;
-                                player.jatekos[3] -= 35;
+                                player.jatekos[3] -= 25;
                                 Console.WriteLine("Sikeres vásárlás!");
                             }
                             else
