@@ -1,0 +1,10 @@
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\bin\Debug\DemoGame.exe.config
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\bin\Debug\DemoGame.exe
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\bin\Debug\DemoGame.pdb
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\bin\Debug\ConsoleTables.dll
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\bin\Debug\ConsoleTables.pdb
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\obj\Debug\DemoGame.csproj.AssemblyReference.cache
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\obj\Debug\DemoGame.csproj.CoreCompileInputs.cache
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\obj\Debug\DemoGame.csproj.CopyComplete
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\obj\Debug\DemoGame.exe
+C:\Users\admin\OneDrive\Asztali gép\DemoGame-main\DemoGame\obj\Debug\DemoGame.pdb
